@@ -1,8 +1,8 @@
-Search analytics processing for GOV.UK
+Search analytics processing
 ======================================
 
 This code extracts analytics data from google analytics and processes it such
-that it can be used by the site search on gov.uk for improving search result
+that it can be used by the site search on websites for improving search result
 quality.
 
 Installation
@@ -10,11 +10,11 @@ Installation
 
 Requires python 2.7.
 
-    virtualenv ENV
-    source ENV/bin/activate
+    virtualenv venv
+    source venv/bin/activate
     pip install -r requirements.txt
 
-Note for those unfamiliar with virtualenv: the "source ENV/bin/activate" line
+Note for those unfamiliar with virtualenv: the "source venv/bin/activate" line
 will need to be run in each shell that you want to run the scripts in this
 repository from.
 
@@ -69,8 +69,7 @@ the final argument `14` is the number of days to fetch analytics data for.)
 
 This will generate a file called `page-traffic.dump`, which is in elasticsearch
 bulk load format, and can be loaded into the search index using the `bulk_load`
-script in search-api.  This contains information on the amount of traffic each
-page on GOV.UK got (after some normalisation).
+script in search-api.
 
 The fetching script fetches data from GA by making requests for each day's
 data.  It caches the results for each day, so that it doesn't need to repeat
