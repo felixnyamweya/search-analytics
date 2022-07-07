@@ -10,6 +10,6 @@ py==1.4.20
 pyOpenSSL==17.0.0
 pytest==2.5.2
 python-gflags==2.0
-requests==2.2.1
+requests==2.20.0
 urllib3==1.8
 wsgiref==0.1.2
